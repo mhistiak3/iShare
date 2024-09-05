@@ -33,7 +33,7 @@
         <h2 class="text-xl font-semibold text-center mb-4">Upload a File</h2>
         <div id="dropzone" class="dropzone p-6 rounded-md cursor-pointer">
           <p class="text-center text-gray-600">Drag & drop your files here or <span class="text-blue-600">browse</span></p>
-          <input type="file" id="fileInput" class="hidden" multiple>
+          <input type="file" id="fileInput" class="hidden" name="file">
         </div>
         <button id="uploadButton" class="w-full bg-blue-600 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-700 transition">Upload Files</button>
       </div>
@@ -52,7 +52,12 @@
       &copy; 2024 iShare. All rights reserved.
     </div>
   </div>
+  <!-- Alert Message Container -->
+<div id="alertContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
 
-  <script src="app.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
 </body>
 </html>
