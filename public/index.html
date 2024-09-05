@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iShare - File Sharing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .dropzone {
+      border: 2px dashed #e2e8f0;
+      background: #f7fafc;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .dropzone.hover {
+      background: #e2e8f0;
+      border-color: #cbd5e0;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-blue-100 to-blue-200 text-gray-900">
+
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    <!-- Header -->
+    <div class="w-full max-w-lg text-center mb-6">
+      <h1 class="text-4xl font-extrabold text-blue-700">iShare</h1>
+      <p class="text-gray-700 mt-2">Share files with others connected to the same Wi-Fi network.</p>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="w-full max-w-lg bg-white rounded-lg shadow-lg p-6 mb-6">
+      <!-- File Upload Section -->
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold text-center mb-4">Upload a File</h2>
+        <div id="dropzone" class="dropzone p-6 rounded-md cursor-pointer">
+          <p class="text-center text-gray-600">Drag & drop your files here or <span class="text-blue-600">browse</span></p>
+          <input type="file" id="fileInput" class="hidden" multiple>
+        </div>
+        <button id="uploadButton" class="w-full bg-blue-600 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-700 transition">Upload Files</button>
+      </div>
+
+      <!-- Available Files for Download -->
+      <div>
+        <h2 class="text-xl font-semibold text-center mb-4">Available Files</h2>
+        <ul id="fileList" class="space-y-3">
+          <!-- Files will be dynamically added here -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-sm text-gray-600 mt-4">
+      &copy; 2024 iShare. All rights reserved.
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

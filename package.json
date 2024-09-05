@@ -1,0 +1,20 @@
+{
+  "name": "ishare",
+  "version": "1.0.0",
+  "description": "iShare is a simple web application that allows users connected to the same Wi-Fi network to easily upload and share files with each other.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Istiak Ahammad",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.5"
+  }
+}
