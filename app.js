@@ -2,6 +2,7 @@ const express = require("express");
 const router = require("./routes/router");
 const { getNetworkIpAddress } = require("./service/network");
 const { initIO } = require("./service/scoket");
+const deleteUploadsFolder = require("./service/deleteUploadFolder");
 
 // app
 const app = express();
@@ -19,6 +20,7 @@ app.use("/uploads",express.static("./uploads"))
 // Application Routes
 app.use("/api/v1",router)
 
+setInterval(deleteUploadsFolder, 3600 * 1000); // 1 hour in milliseconds
 const server = app.listen(port, () => {
     if(!ipAddress){
         console.info("server Stopped")
